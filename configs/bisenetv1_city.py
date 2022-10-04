@@ -1,0 +1,20 @@
+
+cfg = dict(
+    model_type='bisenetv1',
+    num_aux_heads=2,
+    lr_start=1e-2,
+    weight_decay=5e-4,
+    warmup_iters=1000,
+    max_iter=80000,
+    dataset='CityScapes',
+    im_root='/home/hi/data/cityscapes/',
+    train_im_anns='/home/hi/',
+    val_im_anns='/home/hi/',
+    scales=[0.75, 2.],
+    cropsize=[512, 1024],
+    ims_per_gpu=8,
+    eval_ims_per_gpu=2,
+    use_fp16=True,
+    use_sync_bn=False,
+    respth='./',
+)
